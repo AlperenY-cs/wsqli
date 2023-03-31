@@ -1,0 +1,4 @@
+pwn==1.0
+pwntools==4.9.0
+termcolor==2.2.0
+websocket_client==1.5.1
