@@ -149,11 +149,20 @@ def data(column_name, table_name):
                     break
     return data
 
+def main():
+    get_database_name = database()
+    print(colored(get_database_name, 'red'))
+    
+    #database name --> table_name
+    
+    get_table_name = tables(get_database_name)
+    print(colored(get_table_name, 'red'))
+    
+    #table and database name --> column names
+    
+    get_column_names = columns(get_table_name, get_database_name)
+    
+    #column names run with data
 
-get_database_name = database()
-print(colored(get_database_name, 'red'))
-get_table_name = tables(get_database_name)
-print(colored(get_table_name, 'red'))
-get_column_names = columns(get_table_name, get_database_name)
-
-
+if __name__ == "__main__":
+    main()
